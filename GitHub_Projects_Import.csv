@@ -1,0 +1,111 @@
+Title,Body,Status,ID,Etapa,Depende de,Criterio de cierre,Evidencia propia
+[DA-01] Definir dos decisiones y dibujar una visita,"ID: DA-01
+Etapa: Diseño
+Depende de: —
+Criterio de cierre: Una nota identifica quién decide, qué haría y cómo se relacionan el turno, dos prestaciones y un cobro parcial.
+Evidencia propia: ",Todo,DA-01,Diseño,—,"Una nota identifica quién decide, qué haría y cómo se relacionan el turno, dos prestaciones y un cobro parcial.",
+[DA-02] Acordar las definiciones de gestión,"ID: DA-02
+Etapa: Diseño
+Depende de: DA-01
+Criterio de cierre: El glosario identifica grano, unidad, fecha y denominador. Un ejemplo distingue ausencia, cancelación, producción y caja.
+Evidencia propia: ",Todo,DA-02,Diseño,DA-01,"El glosario identifica grano, unidad, fecha y denominador. Un ejemplo distingue ausencia, cancelación, producción y caja.",
+[DA-03] Abrir el historial de decisiones,"ID: DA-03
+Etapa: Diseño
+Depende de: DA-01
+Criterio de cierre: Git conserva una decisión con fecha y motivo. Un issue de GitHub referencia la misma tarjeta y define su cierre.
+Evidencia propia: ",Todo,DA-03,Diseño,DA-01,Git conserva una decisión con fecha y motivo. Un issue de GitHub referencia la misma tarjeta y define su cierre.,
+[DA-04] Relevar las fuentes y sus contratos,"ID: DA-04
+Etapa: Recolección
+Depende de: DA-02
+Criterio de cierre: Cada origen tiene responsable ficticio, granularidad, campos, frecuencia, versión y control. Excel, CSV y API están contemplados.
+Evidencia propia: ",Todo,DA-04,Recolección,DA-02,"Cada origen tiene responsable ficticio, granularidad, campos, frecuencia, versión y control. Excel, CSV y API están contemplados.",
+[DA-05] Dibujar el modelo relacional,"ID: DA-05
+Etapa: Base de datos
+Depende de: DA-04
+Criterio de cierre: El diagrama expresa cardinalidades y permite recorrer dos prestaciones, cuotas y gastos sin duplicar importes.
+Evidencia propia: ",Todo,DA-05,Base de datos,DA-04,"El diagrama expresa cardinalidades y permite recorrer dos prestaciones, cuotas y gastos sin duplicar importes.",
+[DA-06] Especificar campos y restricciones,"ID: DA-06
+Etapa: Base de datos
+Depende de: DA-05
+Criterio de cierre: El diccionario indica tipos, PK, FK, unicidad, nulos y reglas. Tenés un ejemplo válido y uno rechazado por regla clave.
+Evidencia propia: ",Todo,DA-06,Base de datos,DA-05,"El diccionario indica tipos, PK, FK, unicidad, nulos y reglas. Tenés un ejemplo válido y uno rechazado por regla clave.",
+[DA-07] Cerrar a mano un caso en Excel,"ID: DA-07
+Etapa: Recolección
+Depende de: DA-04, DA-05
+Criterio de cierre: Conciliás junio y julio en una tabla dinámica o con filtros. Obtenés ARS 28.000 y ARS 10.000 de saldo.
+Evidencia propia: ",Todo,DA-07,Recolección,"DA-04, DA-05",Conciliás junio y julio en una tabla dinámica o con filtros. Obtenés ARS 28.000 y ARS 10.000 de saldo.,
+[DA-08] Simular un año con Python y NumPy,"ID: DA-08
+Etapa: Recolección
+Depende de: DA-06, DA-07
+Criterio de cierre: Se conservan semilla, período, versiones y supuestos. Repetir la generación reproduce archivos equivalentes.
+Evidencia propia: ",Todo,DA-08,Recolección,"DA-06, DA-07","Se conservan semilla, período, versiones y supuestos. Repetir la generación reproduce archivos equivalentes.",
+[DA-09] Crear entregas con errores conocidos,"ID: DA-09
+Etapa: Recolección
+Depende de: DA-08
+Criterio de cierre: Excel y CSV respetan sus contratos y una lista independiente indica anomalía, fila y resultado esperado.
+Evidencia propia: ",Todo,DA-09,Recolección,DA-08,"Excel y CSV respetan sus contratos y una lista independiente indica anomalía, fila y resultado esperado.",
+[DA-10] Preparar PostgreSQL y Docker Compose,"ID: DA-10
+Etapa: Ingeniería
+Depende de: DA-06
+Criterio de cierre: La base se reconstruye con versiones documentadas. Un reinicio conserva los datos. Podés mostrar una FK que rechaza un caso inválido.
+Evidencia propia: ",Todo,DA-10,Ingeniería,DA-06,La base se reconstruye con versiones documentadas. Un reinicio conserva los datos. Podés mostrar una FK que rechaza un caso inválido.,
+[DA-11] Perfilar y validar un lote con pandas,"ID: DA-11
+Etapa: Ingeniería
+Depende de: DA-09
+Criterio de cierre: El informe muestra antes/después, claves, tipos y nulos. Cada fila tiene una disposición y origen rastreable.
+Evidencia propia: ",Todo,DA-11,Ingeniería,DA-09,"El informe muestra antes/después, claves, tipos y nulos. Cada fila tiene una disposición y origen rastreable.",
+[DA-12] Diseñar y probar la carga incremental,"ID: DA-12
+Etapa: Ingeniería
+Depende de: DA-10, DA-11
+Criterio de cierre: SQLAlchemy revierte un cierre incompleto. El reintento, el duplicado y una revisión tardía conservan totales correctos.
+Evidencia propia: ",Todo,DA-12,Ingeniería,"DA-10, DA-11","SQLAlchemy revierte un cierre incompleto. El reintento, el duplicado y una revisión tardía conservan totales correctos.",
+"[DA-13] Resolver agenda, capacidad y ausencias","ID: DA-13
+Etapa: Análisis SQL
+Depende de: DA-12
+Criterio de cierre: JOIN, GROUP BY y HAVING reproducen el caso manual, incluidos pacientes únicos, ausencia y ocupación.
+Evidencia propia: ",Todo,DA-13,Análisis SQL,DA-12,"JOIN, GROUP BY y HAVING reproducen el caso manual, incluidos pacientes únicos, ausencia y ocupación.",
+"[DA-14] Conciliar prestaciones, caja y deuda","ID: DA-14
+Etapa: Análisis SQL
+Depende de: DA-12
+Criterio de cierre: Las vistas, CTE y acumulados reproducen junio y julio. El ranking conserva el empate en valor y un doble JOIN se detecta.
+Evidencia propia: ",Todo,DA-14,Análisis SQL,DA-12,"Las vistas, CTE y acumulados reproducen junio y julio. El ranking conserva el empate en valor y un doble JOIN se detecta.",
+[DA-15] Explorar al menos dos hipótesis,"ID: DA-15
+Etapa: Exploración
+Depende de: DA-13, DA-14
+Criterio de cierre: El cuaderno Jupyter muestra distribuciones, dos gráficos interpretados, tamaños de muestra y una limitación.
+Evidencia propia: ",Todo,DA-15,Exploración,"DA-13, DA-14","El cuaderno Jupyter muestra distribuciones, dos gráficos interpretados, tamaños de muestra y una limitación.",
+[DA-16] Diseñar el modelo y tres páginas,"ID: DA-16
+Etapa: Power BI
+Depende de: DA-13, DA-14
+Criterio de cierre: Power Query conecta PostgreSQL. Las relaciones y medidas DAX responden a filtros en Agenda, Tratamientos y Caja.
+Evidencia propia: ",Todo,DA-16,Power BI,"DA-13, DA-14","Power Query conecta PostgreSQL. Las relaciones y medidas DAX responden a filtros en Agenda, Tratamientos y Caja.",
+[DA-17] Verificar la primera entrega,"ID: DA-17
+Etapa: Power BI
+Depende de: DA-07, DA-16
+Criterio de cierre: Excel, SQL y Power BI coinciden al filtrar junio, julio y ambos meses. La fecha de actualización queda visible.
+Evidencia propia: ",Todo,DA-17,Power BI,"DA-07, DA-16","Excel, SQL y Power BI coinciden al filtrar junio, julio y ambos meses. La fecha de actualización queda visible.",
+[DA-18] Recibir eventos de agenda con FastAPI,"ID: DA-18
+Etapa: Automatización
+Depende de: DA-12, DA-17
+Criterio de cierre: El contrato define aceptación, duplicado, conflicto y error. Enviar el mismo evento por API y CSV preserva una sola novedad.
+Evidencia propia: ",Todo,DA-18,Automatización,"DA-12, DA-17","El contrato define aceptación, duplicado, conflicto y error. Enviar el mismo evento por API y CSV preserva una sola novedad.",
+[DA-19] Programar y recuperar ejecuciones,"ID: DA-19
+Etapa: Automatización
+Depende de: DA-18
+Criterio de cierre: cron deja evidencia de una corrida normal y otra recuperada. Dos intentos simultáneos conservan una sola carga.
+Evidencia propia: ",Todo,DA-19,Automatización,DA-18,cron deja evidencia de una corrida normal y otra recuperada. Dos intentos simultáneos conservan una sola carga.,
+[DA-20] Preparar la cohorte a 24 horas,"ID: DA-20
+Etapa: Predicción
+Depende de: DA-15, DA-17
+Criterio de cierre: Definiste elegibilidad, etiqueta y exclusiones. Un evento posterior al corte queda fuera de las variables.
+Evidencia propia: ",Todo,DA-20,Predicción,"DA-15, DA-17","Definiste elegibilidad, etiqueta y exclusiones. Un evento posterior al corte queda fuera de las variables.",
+[DA-21] Comparar referencia y modelo,"ID: DA-21
+Etapa: Predicción
+Depende de: DA-20
+Criterio de cierre: scikit-learn compara regresión y referencia con cortes temporales. La ficha registra precisión y cobertura para K revisiones.
+Evidencia propia: ",Todo,DA-21,Predicción,DA-20,scikit-learn compara regresión y referencia con cortes temporales. La ficha registra precisión y cobertura para K revisiones.,
+[DA-22] Cerrar la demostración reproducible,"ID: DA-22
+Etapa: Portafolio
+Depende de: DA-03, DA-19, DA-21
+Criterio de cierre: Otra ejecución reproduce el caso manual. El README final enlaza informe, decisiones, experimento y sus límites en GitHub.
+Evidencia propia: ",Todo,DA-22,Portafolio,"DA-03, DA-19, DA-21","Otra ejecución reproduce el caso manual. El README final enlaza informe, decisiones, experimento y sus límites en GitHub.",
