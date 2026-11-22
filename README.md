@@ -6,10 +6,10 @@ Proyecto de portafolio de **xhito_nk** · Diseño inicial · Una clínica fictic
 
 ## Cómo empezar hoy
 
-1. Abrí [el tablero](Tablero_Dental_Analytics.xlsx). Pasá **DA-01** a *En curso*.
+1. Abrí el [tablero de GitHub Projects](https://github.com/users/ErikVillegas7/projects/1/views/1) y empezá por **DA-01** en *Todo*.
 2. Elegí una decisión de recepción y otra de administración. Escribí qué pregunta haría cada persona y qué haría distinto si conociera la respuesta.
 3. Dibujá en papel un turno con dos prestaciones y un pago parcial. Marcá qué representa una fila de cada registro. En la [guía de métricas](docs/04-analisis-y-power-bi.md) hay un caso con resultados para contrastar después.
-4. Guardá tu dibujo o nota con una fecha. Pegá su ruta en la columna **Evidencia propia** del tablero. Pasá la tarjeta a *Hecha* cuando cumpla su criterio.
+4. Guardá tu dibujo o nota con una fecha y agregá su ruta en el issue correspondiente. Pasá la tarjeta a *In Progress* o *Done* según avances.
 
 ## Qué vas a construir
 
@@ -33,7 +33,9 @@ La primera entrega termina con un informe de Power BI que coincide con el caso m
 | [04 · Análisis y Power BI](docs/04-analisis-y-power-bi.md) | Acordar indicadores, practicar SQL y comprobar el tablero con un cierre manual. |
 | [05 · Ciencia de datos y portafolio](docs/05-ciencia-de-datos-y-portafolio.md) | Explorar hipótesis, plantear una predicción sin fuga temporal y explicar resultados en una entrevista. |
 | [Tablero editable](Tablero_Dental_Analytics.xlsx) | Elegir una tarea, revisar dependencias y guardar evidencia. El porcentaje mide tarjetas terminadas. |
-| [Importar a GitHub Projects](IMPORTAR_GITHUB_PROJECTS.md) | Crear un tablero personal e importar las tareas del proyecto, incluso antes de tener un repositorio. |
+| [Tablero GitHub Projects](https://github.com/users/ErikVillegas7/projects/1/views/1) | Seguir las 22 tareas en issues y moverlas entre estados. |
+| [Usar GitHub Projects](IMPORTAR_GITHUB_PROJECTS.md) | Consultar el flujo de trabajo y cómo registrar evidencia. |
+| [CSV de respaldo](GitHub_Projects_Import.csv) | Conservar una copia tabular de las tareas, etapas, dependencias y criterios de cierre. |
 
 ## Dónde entra cada herramienta
 
@@ -58,9 +60,9 @@ La primera entrega termina con un informe de Power BI que coincide con el caso m
 
 ## Cómo usar el tablero
 
-Cada fila describe un resultado verificable. Usá el filtro **Etapa** para concentrarte en una entrega y **Estado** para ver el trabajo pendiente. Cuando abras una tarea, revisá **Depende de**. En *Revisión*, comprobá la condición de la columna **Se puede cerrar cuando…**. Registrá una ruta, una captura o un commit en **Evidencia propia** antes de elegir *Hecha*. Si algo se traba, elegí *Bloqueada* y anotá qué falta en esa misma columna.
+El tablero de GitHub Projects ya contiene los issues **DA-01–DA-22**, todos en *Todo*. Cada issue incluye la etapa, sus dependencias y un criterio de cierre. Abrí el issue para agregar evidencia y mové la tarjeta entre *Todo*, *In Progress* y *Done*.
 
-Si después preferís GitHub Projects, cada fila puede convertirse en un issue con el mismo ID. Conservá el criterio en la descripción, agrupá el tablero por estado y enlazá el commit o la revisión que lo resuelve. Elegí un solo lugar para actualizar el estado. [Documentación de GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+Las dependencias están documentadas como IDs en el cuerpo de cada issue; todavía no son relaciones automáticas entre issues. Usá GitHub Projects como fuente principal del estado y conservá el Excel como copia editable. [Documentación de GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 
 ## Organización en tu máquina
 

@@ -1,12 +1,12 @@
-# Llevar el seguimiento a GitHub Projects
+# Usar el tablero de GitHub Projects
 
-El archivo [GitHub_Projects_Import.csv](GitHub_Projects_Import.csv) contiene las 22 tareas del tablero de Excel, con sus IDs, etapas, dependencias y criterios de cierre. Todas empiezan en `Todo`; la evidencia queda vacía para completarla a medida que avances.
+El [tablero Dental Analytics - Seguimiento](https://github.com/users/ErikVillegas7/projects/1/views/1) contiene los issues **DA-01–DA-22** del proyecto. Cada issue registra la etapa, las dependencias, el criterio de cierre y el espacio para añadir evidencia.
 
-Podés crear un proyecto personal de GitHub aunque todavía no tengas un repositorio:
+## Flujo de trabajo
 
-1. En GitHub, creá un **Project** personal y elegí la vista **Board**.
-2. Desde el menú del proyecto, elegí la opción para importar desde CSV y seleccioná `GitHub_Projects_Import.csv`.
-3. Agrupá las tarjetas por `Status`. Usá `Etapa` para filtrar el trabajo y registrá los enlaces o rutas de evidencia en `Evidencia propia`.
-4. Cuando tengas un repositorio, vinculalo al proyecto para asociar tareas con issues, cambios y revisiones.
+1. Abrí el tablero y elegí la tarea que quieras avanzar; empezá por **DA-01**.
+2. Mové la tarjeta entre *Todo*, *In Progress* y *Done* para actualizar el estado.
+3. En el cuerpo del issue, completá **Evidencia propia** con la ruta, captura o enlace al commit.
+4. Revisá los IDs en **Depende de** antes de iniciar una tarea.
 
-Las dependencias se importan como texto en `Depende de`; GitHub no las convierte automáticamente en relaciones entre issues. El Excel original permanece intacto.
+Las dependencias son referencias textuales, no relaciones automáticas entre issues. El archivo [GitHub_Projects_Import.csv](GitHub_Projects_Import.csv) queda como copia tabular; el estado principal se actualiza en GitHub Projects.
